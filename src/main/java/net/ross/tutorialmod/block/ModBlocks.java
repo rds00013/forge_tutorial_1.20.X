@@ -13,6 +13,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.ross.tutorialmod.block.custom.SoundBlock;
 import net.ross.tutorialmod.item.ModItems;
 
 import java.util.function.Supplier;
@@ -62,6 +63,10 @@ public class ModBlocks {
                     .strength(5f)
                     .requiresCorrectToolForDrops(),
                     UniformInt.of(3,7)));
+
+    public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
+            () -> new SoundBlock(BlockBehaviour.Properties
+                    .copy(Blocks.NOTE_BLOCK)));
 
 
     /** Helper Methods **/
